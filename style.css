@@ -1,0 +1,378 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* FINAL UPDATE: Near-white, very clean and professional background */
+    font-family: 'Helvetica Neue', Arial, sans-serif; 
+    line-height: 1.6;
+    background-color: #fcfcfc; 
+    color: #333;
+    transition: background-color 0.5s ease;
+}
+
+.container {
+    width: 90%; /* Slightly wider container */
+    max-width: 1200px; /* Limit max width on large screens */
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    color: #1a2a3a; /* Darker, sophisticated color for headings */
+    margin-bottom: 0.5em;
+}
+
+/* --- Header Styling --- */
+header {
+    background-color: #1a2a3a; /* Deep navy/charcoal for elegance */
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem; /* More vertical padding */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    color: #f7b731; /* Bright gold/amber accent for the name */
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* --- Navigation Styling --- */
+nav {
+    background-color: #2c3e50; /* Slightly lighter than header for contrast */
+    padding: 0.75rem 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky; /* Sticky navigation for better UX */
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+    display: block;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Magical Underline Effect on Hover/Active */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #f7b731;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #f7b731;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* --- Section General Styling --- */
+section {
+    padding: 40px 0;
+    margin: 0; 
+}
+
+/* --- Services Section --- */
+.services {
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 30px; 
+    margin-top: 30px;
+}
+
+.service-item {
+    background-color: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px; 
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); 
+    border-top: 5px solid #f7b731; /* Accent line */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover animation */
+}
+
+.service-item h3 {
+    color: #1a2a3a;
+    margin-bottom: 10px;
+}
+
+.service-item:hover {
+    transform: translateY(-5px) scale(1.02); /* Subtle lift and scale */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Pricing Section --- */
+.pricing {
+    text-align: center;
+    /* Subtle background to differentiate from services */
+    background-color: #f5f5f5; 
+}
+
+.pricing-table {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.pricing-item {
+    background-color: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.pricing-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.pricing-item p {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #e74c3c; /* A distinct color for pricing */
+    margin-bottom: 20px;
+}
+
+.pricing-item ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.pricing-item ul li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #eee;
+    color: #555;
+    position: relative;
+    padding-left: 20px;
+}
+
+.pricing-item ul li::before {
+    content: '✓'; /* Checkmark icon */
+    color: #2ecc71; /* Green check */
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Highlight the Premium Option */
+.pricing-table > :nth-child(2) { /* Targeting the 'Premium Suit' item */
+    border: 3px solid #f7b731;
+    box-shadow: 0 10px 30px rgba(247, 183, 49, 0.3); /* Gold glow effect */
+    transform: scale(1.05);
+}
+
+/* --- Measurements Section (Button) --- */
+#measurements {
+    text-align: center;
+    background-color: #1a2a3a;
+    color: white;
+    padding: 50px 20px;
+}
+
+#measurements h2, #measurements p {
+    color: white;
+}
+
+button {
+    background-color: #f7b731;
+    color: #1a2a3a;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #ffc952;
+    transform: translateY(-2px); /* Clickable feel */
+}
+
+/* --- Contact Section (Highly Customized) --- */
+.contact {
+    /* Subtle, elegant background with repeating diagonal stripe texture */
+    background-color: #f5f5f5; /* Background to match pricing section contrast */
+    background-image: repeating-linear-gradient(
+        45deg,
+        #fcfcfc, /* Use the new body background for a subtle tie-in */
+        #fcfcfc 10px,
+        #f5f5f5 10px, /* Use the contact background for the stripe color */
+        #f5f5f5 20px
+    );
+    background-size: 40px 40px;
+    padding: 60px 20px; 
+    text-align: center;
+}
+
+.contact h2 {
+    color: #1a2a3a;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    /* Animation: Subtle title movement */
+    animation: fadeInDown 1s ease-out;
+}
+
+.contact-form {
+    display: grid;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white form background */
+    border-radius: 15px; /* Softer rounded corners */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); /* Elegant shadow */
+    border-top: 5px solid #f7b731; /* Accent gold line */
+    gap: 20px;
+    /* Animation: Form slide-in */
+    animation: slideInUp 1s ease-out;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #ddd; /* Thicker, softer border */
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #fff;
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    border-color: #f7b731; /* Gold focus border */
+    box-shadow: 0 0 10px rgba(247, 183, 49, 0.7);
+    outline: none;
+    background-color: #f9f9f9;
+}
+
+/* Specific style for the Send Message button */
+.contact-form button[type="submit"] {
+    background-color: #2ecc71; 
+    color: white;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form button[type="submit"]:hover {
+    background-color: #27ae60;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(46, 204, 113, 0.4);
+}
+
+/* Keyframe Animations */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Footer Styling --- */
+footer {
+    background-color: #1a2a3a;
+    color: #bbb;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    border-top: 5px solid #f7b731; /* Gold line to cap the page */
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+    .container {
+        width: 95%;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .service-grid, 
+    .pricing-table {
+        grid-template-columns: 1fr;
+    }
+    
+    .pricing-table > :nth-child(2) { /* Scale down premium item on small screens */
+        transform: scale(1.02);
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin: 5px 0;
+    }
+}

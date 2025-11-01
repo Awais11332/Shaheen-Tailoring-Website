@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaheen Perfect Tailoring Services</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Shaheen Perfect Tailoring Services</h1>
+            <p>Custom Tailoring & Alterations Since 2010</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#measurements">Measurements</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="services" class="services container">
+        <h2>Our Services</h2>
+        <div class="service-grid">
+            <div class="service-item">
+                <h3>Custom Suits</h3>
+                <p>Perfectly tailored suits for all occasions</p>
+            </div>
+            <div class="service-item">
+                <h3>Dress Shirts</h3>
+                <p>Precision-made shirts with perfect fit</p>
+            </div>
+            <div class="service-item">
+                <h3>Alterations</h3>
+                <p>Expert modifications and repairs</p>
+            </div>
+            <div class="service-item">
+                <h3>Wedding Attire</h3>
+                <p>Special occasion tailoring</p>
+            </div>
+            <div class="service-item">
+                <h3>Formal Wear</h3>
+                <p>Tuxedos and evening wear</p>
+            </div>
+            <div class="service-item">
+                <h3>Uniform Tailoring</h3>
+                <p>Professional uniforms</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing container">
+        <h2>Pricing</h2>
+        <div class="pricing-table">
+            <div class="pricing-item">
+                <h3>Basic Suit</h3>
+                <p>Starting at 1200</p>
+                <ul>
+                    <li>Standard Fabric</li>
+                    <li>Basic Fitting</li>
+                    <li>2 Fittings Included</li>
+                </ul>
+            </div>
+            <div class="pricing-item">
+                <h3>Premium Suit</h3>
+                <p>Starting at 2000</p>
+                <ul>
+                    <li>High-Quality Fabric</li>
+                    <li>Advanced Tailoring</li>
+                    <li>3 Detailed Fittings</li>
+                </ul>
+            </div>
+            <div class="pricing-item">
+                <h3>Custom Shirt</h3>
+                <p>Starting at 1000</p>
+                <ul>
+                    <li>Custom Measurements</li>
+                    <li>Choice of Fabric</li>
+                    <li>Perfect Fit Guarantee</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="measurements" class="container">
+        <h2>Take Your Measurements</h2>
+        <p>Download our measurement guide to get the perfect fit at home:</p>
+        <button onclick="alert('Measurement guide downloaded!')">Download Measurement Guide</button>
+    </section>
+
+    <section id="contact" class="contact container">
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="tel" placeholder="Your Phone Number">
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Shaheen Perfect Tailoring Services</p>
+            <p>Address: UETM Tailor Street, Fashion City</p>
+            <p>Phone: 03437796380 | Email: awaisuet2004@gmail.com</p>
+            <p>Whatsap:03437796380
+        </div>
+    </footer>
+
+    <script>
+        // Simple form submission handler
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will contact you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

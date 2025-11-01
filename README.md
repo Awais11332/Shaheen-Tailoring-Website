@@ -1,6 +1,6 @@
 # ✂️ Shaheen Perfect Tailoring Services Website
 
-![Shaheen Tailoring Website Full Screenshot](images/full-screenshot.png) 
+![Shaheen Tailoring Website Full Screenshot](images/full-website.png) 
  
 This is the front-end source code for the "Shaheen Perfect Tailoring Services," a professional and elegant website...
 ... (the rest of my README content)

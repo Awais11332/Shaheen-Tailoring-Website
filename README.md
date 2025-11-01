@@ -1,7 +1,9 @@
 # ✂️ Shaheen Perfect Tailoring Services Website
 
-This is the front-end source code for the "Shaheen Perfect Tailoring Services," a professional and elegant website designed to showcase custom tailoring, alterations, and pricing information.
-
+![Shaheen Tailoring Website Full Screenshot](images/full-screenshot.png) 
+ 
+This is the front-end source code for the "Shaheen Perfect Tailoring Services," a professional and elegant website...
+... (the rest of my README content)
 ## ✨ Features
 
 * **Elegant Design:** Modern, sophisticated color palette (Deep Charcoal, Gold, and Off-white) suitable for a luxury bespoke service.
